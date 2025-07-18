@@ -1,0 +1,339 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background: #0a0a0a;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 20px 5%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: 700;
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .home h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 20px;
+            color: #00ff88;
+        }
+
+        .home p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .get-in-touch {
+            padding: 12px 24px;
+            background: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .get-in-touch:hover {
+            transform: scale(1.05);
+            background: #00cc6e;
+        }
+
+        /* About */
+        .about {
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.2s forwards;
+        }
+
+        .about h2, .skills h2, .projects h2, .contact h2 {
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            margin-bottom: 30px;
+            color: #00ff88;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Skills */
+        .skills {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.4s forwards;
+        }
+
+        .skills-grid {
+            display: flex;
+            column-gap: 10px;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 120px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-8px);
+            box-shadow: inset 0px 0px 5px 3px rgba(0, 255, 136, 0.2);
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00ff88;
+        }
+
+        /* Projects */
+        .projects {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.6s forwards;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 15px;
+            column-gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            width: 280px;
+            border-radius: 12px;
+            text-align: center;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 0.5s ease-out forwards;
+            animation-delay: calc(0.2s * var(--i));
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow:  inset 0px 0px 5px 3px rgba(0, 255, 136, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            margin-bottom: 20px;
+        }
+
+        .project-card a {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #fff;
+        }
+
+        /* Contact */
+        .contact {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.8s forwards;
+        }
+
+        .contact form {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            transition: background 0.3s ease;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+
+        .contact button {
+            padding: 15px;
+            background: #00ff88;
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .contact button:hover {
+            transform: scale(1.05);
+            background: #00cc6e;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px 5%;
+            text-align: center;
+            color: #fff;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #00ff88;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        footer .social-links i {
+            font-size: 1.2rem;
+            margin: 0 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .home h1 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 8px;
+            }
+
+            .home p {
+                font-size: 0.9rem;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
+        }

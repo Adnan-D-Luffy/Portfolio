@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Adnan's Portfolio - A passionate web developer from Rangpur, Bangladesh, specializing in JavaScript, Node.js, HTML, CSS, Express, EJS, and MongoDB. Explore my projects and get in touch!">
+     
+    <title>Adnan's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <a href="#" class="logo">Adnan</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div>
+            <h1>Hi, I'm Adnan</h1>
+            <p>A passionate developer skilled in modern web technologies, building dynamic and responsive applications.</p>
+            <button class="get-in-touch" onclick="window.location.href='#contact'">Get in Touch</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div>
+            <h2>About Me</h2>
+            <p>I'm Adnan, a web developer based in Rangpur, Bangladesh. I specialize in JavaScript, Node.js, HTML, CSS, Express, EJS, and MongoDB, creating dynamic and responsive web applications. I'm currently learning C to explore systems programming. My passion lies in building user-friendly, high-performance solutions, and I'm always eager to tackle new challenges and innovate.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div>
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-js"></i><br>JavaScript</div>
+                <div class="skill-item"><i class="fab fa-node-js"></i><br>Node.js</div>
+                <div class="skill-item"><i class="fab fa-html5"></i><br>HTML</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i><br>CSS</div>
+                <div class="skill-item"><i class="fas fa-server"></i><br>Express</div>
+                <div class="skill-item"><i class="fas fa-code"></i><br>EJS</div>
+                <div class="skill-item"><i class="fas fa-database"></i><br>MongoDB</div>
+                <div class="skill-item"><i class="fab fa-cuttlefish"></i><br>C (Learning)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div>
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" style="--i: 1">
+                    <h3>MDA-Server</h3>
+                    <p>A server application built with Node.js for developers.</p>
+                    <a href="https://github.com/Adnan-D-Luffy/MDA-Server">View Project</a>
+                </div>
+                <div class="project-card" style="--i: 2">
+                    <h3>AniPub</h3>
+                    <p>An Anime Watching Site Created with Node.js</p>
+                    <a href=https://anipub.adnandluffy.com">View Project</a>
+                </div>
+                <div class="project-card" style="--i: 3">
+                    <h3>BanglaNumber</h3>
+                    <p>A package that let's you do math using Bangla Numaric Letters </p>
+                    <a href="https://github.com/Adnan-D-Luffy/BanglaNumber">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div>
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Adnan | Rangpur, Bangladesh</p>
+        <p>Phone: +880 1328 566 886 | Email: mail@adnandluffy.com</p>
+        <div class="social-links">
+            <a href="https://github.com/adnan-d-luffy" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://facebook.com/adnandluffy.atomic" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>© 2025 AdnanDLuffy. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
