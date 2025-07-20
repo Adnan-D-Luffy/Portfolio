@@ -8,6 +8,8 @@ app.use(express.static(path.join(__dirname,"Files")));
 
 app.set("view engine" ,"ejs");
 app.set("views",path.join(__dirname,"Files"))
+app.use(express.urlencoded({extended:true}))
+app.use(express.json());
 
 app.listen(3000,()=>{
     console.log("Server is Up !")
@@ -15,4 +17,8 @@ app.listen(3000,()=>{
 
 app.get("/",(req,res)=>{
     res.render("index")
+})
+app.post("/sent/msge",(req,res)=>{      
+    console.log(req.body)
+
 })

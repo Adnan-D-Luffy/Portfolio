@@ -1,0 +1,52 @@
+body {
+    background: black;
+}
+p {
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: black;
+    border-bottom: 1px solid rgb(235, 214, 214);
+}
+header p {
+    font-size: 22px;
+    font-family: monospace;
+}
+main {
+    padding-top: 55px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+} 
+.box {
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 3px rgb(0, 0, 255);
+}
+.Name , .Email {
+    margin-left: 5px;
+    font-family: monospace;
+}
+.f-s {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.f-s button {
+    height: fit-content;
+}
