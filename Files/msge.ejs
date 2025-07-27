@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnan-D-Luffy All Msge</title>
+    <link rel="stylesheet" href="./style/msge.css">
+</head>
+<body>
+    <header>
+        <p> Message sent by Visitors </p>
+      
+    </header>
+    <main>
+       
+        <div class="container"> 
+            <% info.forEach(value => { %>
+            <div class="box" data-msgeid="<%= value.id %> " >
+                <div class="f-s">
+                    <p class="Name"><%=value.Name%></p>
+                    <button>Done</button>
+                </div>
+                <p class="Email"><%
+               const mail = value.Email ;
+               const num = mail.length -3;
+               let i = "";
+               for (let j = 0; j < num; j++) {
+                i += "*"
+               }
+                %>
+            <%=i%>.com    
+            </p>
+            </div>
+      <%  }); %> 
+           
+            
+            
+          
+        </div>
+    </main>
+</body>
+</html>

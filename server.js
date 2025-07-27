@@ -28,6 +28,16 @@ mongoose.connect(mongooseID)
 app.get("/",(req,res)=>{
     res.render("index")
 })
+
+
+app.get("/txt",(req,res)=>{
+    Alu.find()
+   .then(info=>{
+    res.render("msge",{info})
+   })
+})
+
+
 app.post("/sent/msge",async (req,res)=>{      
     const Name = req.body.Name;
     const mail = req.body.mail;
@@ -50,6 +60,7 @@ app.post("/sent/msge",async (req,res)=>{
    
 
 })
+
 })
 .catch((err)=>{
     console.log(err)
