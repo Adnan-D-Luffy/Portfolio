@@ -26,6 +26,9 @@
             z-index: 1000;
         }
 
+        .msge {
+            text-align: center;
+        }
         .logo {
             font-size: clamp(1.5rem, 5vw, 2rem);
             font-weight: 700;
